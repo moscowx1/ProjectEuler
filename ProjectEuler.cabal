@@ -29,13 +29,16 @@ library
       Problem2
       Problem3
       Problem4
+      Problem5
+      Problem6
   other-modules:
       Paths_ProjectEuler
   hs-source-dirs:
       src
-  ghc-options: -Wall -Wcompat -Widentities -Wincomplete-record-updates -Wincomplete-uni-patterns -Wmissing-export-lists -Wmissing-home-modules -Wpartial-fields -Wredundant-constraints
+  ghc-options: -Wall -Wcompat -Widentities -Wincomplete-record-updates -Wincomplete-uni-patterns -Wmissing-export-lists -Wmissing-home-modules -Wpartial-fields -Wredundant-constraints -XNumericUnderscores
   build-depends:
       base >=4.7 && <5
+    , mtl
   default-language: Haskell2010
 
 executable ProjectEuler-exe
@@ -44,10 +47,11 @@ executable ProjectEuler-exe
       Paths_ProjectEuler
   hs-source-dirs:
       app
-  ghc-options: -Wall -Wcompat -Widentities -Wincomplete-record-updates -Wincomplete-uni-patterns -Wmissing-export-lists -Wmissing-home-modules -Wpartial-fields -Wredundant-constraints -threaded -rtsopts -with-rtsopts=-N
+  ghc-options: -Wall -Wcompat -Widentities -Wincomplete-record-updates -Wincomplete-uni-patterns -Wmissing-export-lists -Wmissing-home-modules -Wpartial-fields -Wredundant-constraints -XNumericUnderscores -threaded -rtsopts -with-rtsopts=-N
   build-depends:
       ProjectEuler
     , base >=4.7 && <5
+    , mtl
   default-language: Haskell2010
 
 test-suite ProjectEuler-test
@@ -57,8 +61,9 @@ test-suite ProjectEuler-test
       Paths_ProjectEuler
   hs-source-dirs:
       test
-  ghc-options: -Wall -Wcompat -Widentities -Wincomplete-record-updates -Wincomplete-uni-patterns -Wmissing-export-lists -Wmissing-home-modules -Wpartial-fields -Wredundant-constraints -threaded -rtsopts -with-rtsopts=-N
+  ghc-options: -Wall -Wcompat -Widentities -Wincomplete-record-updates -Wincomplete-uni-patterns -Wmissing-export-lists -Wmissing-home-modules -Wpartial-fields -Wredundant-constraints -XNumericUnderscores -threaded -rtsopts -with-rtsopts=-N
   build-depends:
       ProjectEuler
     , base >=4.7 && <5
+    , mtl
   default-language: Haskell2010
