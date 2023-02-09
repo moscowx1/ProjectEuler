@@ -9,26 +9,9 @@
 
 module Problem5 where
 
-import Control.Monad.State (State, get)
-import Data.List (groupBy, maximumBy)
-import System.IO.Unsafe (unsafeFixIO)
+import Data.List (groupBy)
 
 -- ans 232792560
-
-k = 9699690
-
-k1 = 232792560
-
-k3 = 77597520
-
-k2 = 4655851200
-
-kf :: Integer -> Int
-kf = length . show
-
--- >>> kf k1
--- 9
-
 divs :: [Integer]
 divs = [2 .. 20]
 
@@ -52,8 +35,6 @@ solution2 :: Integer
 solution2 = head $ take 1 $ filter isMn [minProbDiv ..]
 
 -- (205.14 secs, 107,406,566,200 bytes)
-
--- solution3 :: Int
 
 counts :: Integer -> Integer -> Integer
 counts x y
