@@ -32,6 +32,7 @@ library
       Problem5
       Problem6
       Problem7
+      Problem8
   other-modules:
       Paths_ProjectEuler
   hs-source-dirs:
