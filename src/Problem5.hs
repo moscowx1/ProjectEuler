@@ -60,20 +60,13 @@ counts x y
   | x `mod` y == 0 = 1 + counts (x `div` y) y
   | otherwise = 0
 
-solution3 = product $ map (uncurry (*)) primeMaxC
+solution3 :: Integer
+solution3 = product $ map (uncurry (^)) primeMaxC
   where
     primeMaxC = map (\xs -> (fst $ head xs, maximum $ map snd xs)) groupPrimeC
     groupPrimeC = groupBy (\x y -> fst x == fst y) primeCount
-    primeCount =
-      [ (p, c) | p <- primes, n <- nums, let c = counts n p, c > 0
-      ]
+    primeCount = [(p, c) | p <- primes, n <- nums, let c = counts n p, c > 0]
     primes = filter isPrime nums
     nums = [2 .. 20]
-t = primeCount
-  where
-    primeCount =
-      [ (n, p, c) | p <- primes, n <- nums, let c = counts n p, c > 0
-      ]
-    primes = filter isPrime nums
-    nums = [2 .. 20]
--- TODO
+
+-- (0.00 secs, 645,504 bytes)
